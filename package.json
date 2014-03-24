@@ -1,0 +1,31 @@
+{
+  "name": "serverbone-example",
+  "version": "0.0.0",
+  "description": "Example application using serverbone",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikkolehtinen/serverbone-example.git"
+  },
+  "keywords": [
+    "serverbone"
+  ],
+  "author": "Mikko Lehtinen <me@kosmikko.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikkolehtinen/serverbone-example/issues"
+  },
+  "homepage": "https://github.com/mikkolehtinen/serverbone-example",
+  "dependencies": {
+    "serverbone": "~0.2.4",
+    "redis": "~0.10.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "backbone-db-redis": "0.0.17",
+    "chai": "~1.9.1"
+  }
+}

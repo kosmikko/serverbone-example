@@ -1,0 +1,1 @@
+exports.Movie = require('./movie');
