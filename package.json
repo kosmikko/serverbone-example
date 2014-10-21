@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/mikkolehtinen/serverbone-example",
   "dependencies": {
-    "serverbone": "~0.2.4",
+    "serverbone": "~0.4.14",
     "redis": "~0.10.1"
   },
   "devDependencies": {
-    "mocha": "~1.18.2",
-    "backbone-db-redis": "0.0.17",
-    "chai": "~1.9.1"
+    "mocha": "~1.21.5",
+    "backbone-db-redis": "~0.0.44",
+    "chai": "~1.9.2"
   }
 }
