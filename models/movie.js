@@ -32,9 +32,10 @@ var schema = {
 
 var Movie = serverbone.models.BaseModel.extend({
   schema: schema,
-  type: 'movie',
   db: store,
-  sync: store.sync
+  sync: store.sync,
+  type: 'movie',
+  dbBaseKey: 'movies'
 });
 
 module.exports = Movie;

@@ -9,7 +9,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 var moviesResource = new serverbone.Resource('movies', {
-  model: models.Movie,
   collection: collections.Movies
 });
 // mount Movies resource into /movies

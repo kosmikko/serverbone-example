@@ -27,7 +27,15 @@ describe('Movie tests', function() {
     return movies
       .fetch()
       .then(function() {
-        console.log('movies', movies.toJSON());
+        console.log('movies', movies.length, movies.toJSON());
       });
+  });
+
+  it('should delete a movie', function() {
+    return movies.at(0).destroy().then(function() {
+      return movies.fetch().then(function() {
+        console.log('x', movies.length);
+      });
+    });
   });
 });
