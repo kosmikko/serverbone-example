@@ -14,7 +14,7 @@ describe('Movie tests', function() {
   });
 
   it('should save a Movie model', function() {
-    movies.create({
+    return movies.create({
       title: 'Foo movie',
       genres: ['action', 'comedy']
     }).then(function(movie) {
