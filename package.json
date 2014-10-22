@@ -24,7 +24,8 @@
     "redis": "~0.10.1",
     "express": "~4.9.8",
     "body-parser": "~1.9.0",
-    "backbone-blueprint": "~0.1.6"
+    "backbone-blueprint": "~0.1.6",
+    "when": "~3.5.0"
   },
   "devDependencies": {
     "mocha": "~1.21.5",

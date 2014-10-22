@@ -1,16 +1,19 @@
 var serverbone = require('serverbone');
-var redis = require("redis");
-var RedisDb = require('backbone-db-redis');
-var store = new RedisDb('serverbone-example', redis.createClient());
+var config = require('../config');
 
 /**
  * Movie is stored in Redis
  */
 var Movie = serverbone.models.BaseModel.extend({
-  db: store,
-  sync: store.sync,
   type: 'movie',
-  dbBaseKey: 'movies'
+  dbBaseKey: 'movies',
+  initialize: function () {
+    if (!Movie.prototype.db) {
+      Movie.prototype.db = config.dbs.redis;
+      Movie.prototype.sync = config.dbs.redis.sync;
+    }
+    return Movie.__super__.initialize.apply(this, arguments);
+  }
 });
 
 module.exports = Movie;

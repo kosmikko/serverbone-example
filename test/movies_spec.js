@@ -1,3 +1,4 @@
+var config = require('../config');
 var collections = require('../collections');
 var models = require('../models');
 var should = require('chai').should();
@@ -6,7 +7,9 @@ describe('Movie tests', function() {
   var movies;
 
   before(function() {
-    movies = new collections.Movies();
+    return config.init().then(function() {
+      movies = new collections.Movies();
+    });
   });
 
   after(function() {
