@@ -1,5 +1,5 @@
 var BaseCollection = require('serverbone').collections.BaseCollection;
-var Movie = require('../models/movie');
+var Movie = require('../models').Movie;
 
 var Movies = module.exports = BaseCollection.extend({
   sync: Movie.prototype.sync,
