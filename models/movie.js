@@ -6,14 +6,7 @@ var config = require('../config');
  */
 var Movie = serverbone.models.BaseModel.extend({
   type: 'movie',
-  dbBaseKey: 'movies',
-  initialize: function () {
-    if (!Movie.prototype.db) {
-      Movie.prototype.db = config.dbs.redis;
-      Movie.prototype.sync = config.dbs.redis.sync;
-    }
-    return Movie.__super__.initialize.apply(this, arguments);
-  }
+  dbBaseKey: 'movies'
 });
 
 module.exports = Movie;

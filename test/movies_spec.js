@@ -8,6 +8,8 @@ describe('Movie tests', function() {
 
   before(function() {
     return config.init().then(function() {
+      models.Movie.setDbDriver(config.dbs.redis);
+      collections.Movies.setDbDriver(config.dbs.redis);
       movies = new collections.Movies();
     });
   });
