@@ -1,9 +1,9 @@
 var BaseCollection = require('serverbone').collections.BaseCollection;
 var Actor = require('../models').Actor;
+var config = require('../config');
 
 var Actors = module.exports = BaseCollection.extend({
-  sync: Actor.prototype.sync,
-  db: Actor.prototype.db,
   model: Actor,
-  type: 'actors'
+  type: 'actors',
+  mongo_collection: Actor.prototype.mongo_collection,  // FIXME: the driver should derive this from the type
 });

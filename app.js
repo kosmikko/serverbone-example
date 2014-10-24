@@ -1,7 +1,6 @@
 var express = require('express');
 var serverbone = require('serverbone');
 var bodyParser = require('body-parser');
-var models = require('./models');
 var collections = require('./collections');
 
 var app = express();
